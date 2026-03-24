@@ -710,12 +710,29 @@ const SESSIONS = [
     ]
   },
   // ── TUESDAY ─────────────────────────────────────────────────────────────
-  { id:"tue-cardio", day:"Tuesday", name:"REST + Conditioning — Steady-State Bike", type:"cardio",
+  { id:"tue-gym", day:"Tuesday", name:"GYM — Day 4: Hypertrophy Legs + Core + Grip", type:"gym4",
     exercises:[
-      ["Steady-State Exercise Bike","","25–35 min","HR 130–150","Conversational pace — you should be able to hold a sentence. Primary fat-loss session. Do not push intensity; this is active recovery.",0],
+      {section:"Warm-Up"},
+      ["Exercise Bike","","2 min","Easy","Easy-to-moderate pace to warm up the lower body before machine work.",0],
+      ["Bodyweight Lunges","","8 each leg","","Controlled, feel the stretch at the bottom of each lunge. Activates glutes and quads.",0],
+      ["Leg Swings (Side-to-Side)","","10 each leg","","Hold a rack for balance, swing each leg side-to-side. Opens the hips dynamically.",0],
+      {section:"Main Exercises"},
+      ["Hack Squat (Machine)",4,"10–12","8–9","Full range of motion, moderate weight. Vary foot placement across sets. FINAL SET: Double Drop Set — strip 25%, continue, strip another 25%, continue to failure.",4],
+      ["Leg Extension (Attachment)",3,"12–15","8–9","Tempo 2-1-2-1. Do not lock out aggressively — protect the knees. FINAL SET: Rest-Pause.",3],
+      ["Leg Curl (Attachment)",3,"12–15","8–9","Explosive up, 3-sec eccentric. FINAL SET: Drop Set — drop 30%, continue to failure.",3],
+      ["Calf Raise",3,"15–20","9","Full stretch at the bottom, hard squeeze at the top with a 1-sec hold.",3],
+      {section:"Core Giant Set (2–3 rounds, 90 sec rest)"},
+      ["Cable Pallof Press",2,"12 each side","8","Stand side-on to cable. Press out and hold 3 seconds at full extension. Anti-rotation core stability.",2],
+      ["Cable Crunch (Kneeling)",2,"15–20","8–9","Curl the torso down hard, squeeze the abs at the bottom. Add weight progressively.",2],
+      ["Cable Woodchop (Low to High)",2,"10 each side","8","Explosive rotation from low to high. Controlled return. Builds rotational power from a different plane.",2],
+      ["Dead Bug (Weighted)",2,"10 each side","8","Hold a 5–10 kg plate overhead. Opposite arm and leg extension while keeping lower back pressed to floor.",0],
+      {section:"Grip Work"},
+      ["Barbell Wrist Curl",2,"15–20","8","Forearms resting on bench, full range of motion wrist curl. Builds forearm size and endurance.",2],
+      ["Plate Pinch Hold",2,"20–30 sec","9","Pinch two plates together (smooth sides out). Target 2 × 10 kg plates. Builds the pinch grip used in gi gripping.",0],
+      ["Barbell Reverse Curl",2,"12–15","8","Overhand grip, strict form, no swinging. Targets the brachioradialis and forearm extensors.",2],
     ]
   },
-  { id:"tue-mob", day:"Tuesday Evening", name:"Mobility — Routine C: Full Body Flow", type:"mobility",
+  { id:"tue-mob", day:"Tuesday Evening", name:"Mobility — Routine B: Thoracic & Shoulders (Short)", type:"mobility",
     exercises:[
       ["90/90 Hip Switch","","2 min","","Sit with both knees at 90°. Rotate from side to side keeping torso tall.",0],
       ["World's Greatest Stretch","","3 min","","Lunge forward, hands inside front foot, rotate torso and reach to ceiling. Mobilises hips, thoracic spine, hamstrings, and hip flexors simultaneously.",0],
@@ -763,29 +780,12 @@ const SESSIONS = [
     ]
   },
   // ── THURSDAY ────────────────────────────────────────────────────────────
-  { id:"thu-gym", day:"Thursday", name:"GYM — Day 4: Hypertrophy Legs + Core + Grip", type:"gym4",
+  { id:"thu-cardio", day:"Thursday", name:"REST + Conditioning — Steady-State Bike", type:"cardio",
     exercises:[
-      {section:"Warm-Up"},
-      ["Exercise Bike","","2 min","Easy","Easy-to-moderate pace to warm up the lower body before machine work.",0],
-      ["Bodyweight Lunges","","8 each leg","","Controlled, feel the stretch at the bottom of each lunge. Activates glutes and quads.",0],
-      ["Leg Swings (Side-to-Side)","","10 each leg","","Hold a rack for balance, swing each leg side-to-side. Opens the hips dynamically.",0],
-      {section:"Main Exercises"},
-      ["Hack Squat (Machine)",4,"10–12","8–9","Full range of motion, moderate weight. Vary foot placement across sets. FINAL SET: Double Drop Set — strip 25%, continue, strip another 25%, continue to failure.",4],
-      ["Leg Extension (Attachment)",3,"12–15","8–9","Tempo 2-1-2-1. Do not lock out aggressively — protect the knees. FINAL SET: Rest-Pause.",3],
-      ["Leg Curl (Attachment)",3,"12–15","8–9","Explosive up, 3-sec eccentric. FINAL SET: Drop Set — drop 30%, continue to failure.",3],
-      ["Calf Raise",3,"15–20","9","Full stretch at the bottom, hard squeeze at the top with a 1-sec hold.",3],
-      {section:"Core Giant Set (2–3 rounds, 90 sec rest)"},
-      ["Cable Pallof Press",2,"12 each side","8","Stand side-on to cable. Press out and hold 3 seconds at full extension. Anti-rotation core stability.",2],
-      ["Cable Crunch (Kneeling)",2,"15–20","8–9","Curl the torso down hard, squeeze the abs at the bottom. Add weight progressively.",2],
-      ["Cable Woodchop (Low to High)",2,"10 each side","8","Explosive rotation from low to high. Controlled return. Builds rotational power from a different plane.",2],
-      ["Dead Bug (Weighted)",2,"10 each side","8","Hold a 5–10 kg plate overhead. Opposite arm and leg extension while keeping lower back pressed to floor.",0],
-      {section:"Grip Work"},
-      ["Barbell Wrist Curl",2,"15–20","8","Forearms resting on bench, full range of motion wrist curl. Builds forearm size and endurance.",2],
-      ["Plate Pinch Hold",2,"20–30 sec","9","Pinch two plates together (smooth sides out). Target 2 × 10 kg plates. Builds the pinch grip used in gi gripping.",0],
-      ["Barbell Reverse Curl",2,"12–15","8","Overhand grip, strict form, no swinging. Targets the brachioradialis and forearm extensors.",2],
+      ["Steady-State Exercise Bike","","25–35 min","HR 130–150","Conversational pace — you should be able to hold a sentence. Primary fat-loss session. Do not push intensity; this is active recovery.",0],
     ]
   },
-  { id:"thu-mob", day:"Thursday Evening", name:"Mobility — Routine B: Thoracic & Shoulders (Short)", type:"mobility",
+  { id:"thu-mob", day:"Thursday Evening", name:"Mobility — Routine C: Full Body Flow", type:"mobility",
     exercises:[
       ["Thread the Needle","","1 min","","On hands and knees, reach one arm under the body and rotate the thoracic spine. 30 sec each side.",0],
       ["Open Book (Side-Lying Rotation)","","1 min","","Lie on one side, open the top arm across the body, rotating the thoracic spine. 30 sec each side.",0],
@@ -861,9 +861,9 @@ const TRACKED_LIFTS = [
 const DAY_GROUPS = [
   { label:"Sunday",       icon:"🏋️",  sessions:["sun-gym","sun-mob"] },
   { label:"Monday",       icon:"🏋️",  sessions:["mon-gym","mon-mob"] },
-  { label:"Tuesday",      icon:"🚴",  sessions:["tue-cardio","tue-mob"] },
+  { label:"Tuesday",      icon:"🏋️",  sessions:["tue-gym","tue-mob"] },
   { label:"Wednesday",    icon:"🏋️",  sessions:["wed-gym","wed-mob"] },
-  { label:"Thursday",     icon:"🏋️",  sessions:["thu-gym","thu-mob"] },
+  { label:"Thursday",     icon:"🚴",  sessions:["thu-cardio","thu-mob"] },
   { label:"Friday",       icon:"🥋",  sessions:["fri-judo","fri-flex"] },
   { label:"Saturday",     icon:"😴",  sessions:["sat-rest","sat-mob"] },
 ];
