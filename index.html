@@ -1968,8 +1968,10 @@ function updateProgressionBadge(week, sess, exIdx, weightSets, exName, badgeEl) 
 // has at least one weight entry logged.
 function isWeekComplete(w) {
   if (w < 1) return true; // before start is always complete
+  // All 4 gym sessions must have at least one weight logged
   const gymSessions = SESSIONS.filter(s => s.type && s.type.startsWith('gym'));
   for (const sess of gymSessions) {
+    let sessHasWeight = false;
     let exRealIdx = 0;
     for (const ex of sess.exercises) {
       if (ex.section !== undefined) continue;
@@ -1978,12 +1980,15 @@ function isWeekComplete(w) {
       if (weightSets > 0) {
         for (let s = 0; s < weightSets; s++) {
           const v = loadWeight(w, sess.id, idx, s);
-          if (v && parseFloat(v) > 0) return true;
+          if (v && parseFloat(v) > 0) { sessHasWeight = true; break; }
         }
       }
+      if (sessHasWeight) break;
     }
+    // If this gym session has no weight logged at all, week is not complete
+    if (!sessHasWeight) return false;
   }
-  return false;
+  return true; // All 4 gym sessions have at least one weight logged
 }
 
 // Returns the highest unlocked week (week 1 is always unlocked)
